@@ -1,0 +1,60 @@
+<h2>Update Bill Status</h2>
+Bill Id : {billId} <p>
+Building Name : {buildingName} <p>
+Complex  : {complexDescription} <p>
+Apartment Type : {apartmentTypeDescription} <p>
+Utility Type : {utilityTypeDescription} <p>
+First Name : {firstName} <p>
+Last Name : {lastName} <p>
+Amount Due : {originalAmountDue} <p>
+<!-- Amount Outstanding : {amountOutstanding} <p> -->
+Issue Date : {formattedIssueDate} <p>
+Payment Due Date : {formattedPaymentDueDate} <p>
+<form id="updateForm">
+<table>
+		<tr>
+			<td>Transaction Type</td>
+			<td><div id="transactionType" name="transactionType"></div></td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td><input type="text" name="paidDate" id="paidDate" 
+    data-dojo-type="dijit/form/DateTextBox"
+    required="true" /></td>
+			
+		</tr>
+		<tr>
+			<td>Amount</td>
+			<td><input type="text" name="paidAmount" id="paidAmount" 
+    data-dojo-type="dijit/form/NumberTextBox"
+    required="true" /></td>
+			
+		</tr>
+		<tr>
+			<td>Cheque No</td>
+			<td><input type="text" name="chequeNumber" id="chequeNumber" 
+    data-dojo-type="dijit/form/NumberTextBox"
+    required="true" /></td>
+			
+		</tr>
+		<tr>
+			<td>Account</td>
+			<td><div id="accountType" name="accountType"></div></td>
+			
+		</tr>
+		<tr>
+			<td>Amount to be deducted from Account </td>
+			<td><input type="text" name="amountpayableFromOutstanding" id="amountpayableFromOutstanding" 
+    data-dojo-type="dijit/form/NumberTextBox"
+    required="true" />
+			
+		</tr>
+</table>
+<input type="text" name="billId" id="billId" hidden="true" value="{billId}" />
+    
+<div class="searchButtonColumn">
+				<button id="UpdateBillBtn">Update Bill</button>
+			</div>
+</form>
+
+				
