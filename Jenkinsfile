@@ -4,7 +4,6 @@ pipeline {
     stage('build') {
       steps {
         git(url: 'https://github.com/altafmulla/codev.git', branch: 'master')
-        tool(name: 'mvnHome', type: 'tool \'M3\'')
       }
     }
     stage('clean') {
@@ -18,5 +17,8 @@ pipeline {
         archive 'target/*.jar'
       }
     }
+  }
+  environment {
+    mvnHome = 'tool \'M3\''
   }
 }
