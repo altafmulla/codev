@@ -1,13 +1,16 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'maven:3-alpine'
+      args '-v /root/.m2:/root/.m2'
+    }
+    
+  }
   stages {
     stage('initialise') {
       steps {
         echo 'this is minimal pipeline'
       }
     }
-  }
-  environment {
-    mvnHome = 'tool \'M3\''
   }
 }
