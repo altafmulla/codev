@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        git(url: 'https://github.com/altafmulla/codev.git', branch: 'master')
-        
+        git(url: 'https://github.com/altafmulla/codev.git', branch: 'master')  
       }
     }
     stage('clean') {
@@ -14,7 +13,7 @@ pipeline {
     }
     stage('results') {
       steps {
-        jenkins '**/target/surefire-reports/TEST-*.xml'
+        junit '**/target/surefire-reports/TEST-*.xml'
         archive 'target/*.jar'
       }
     }
