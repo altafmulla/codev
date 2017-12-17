@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        build 'build'
+        git(url: 'https://github.com/altafmulla/codev.git', branch: 'master')
       }
     }
   }
