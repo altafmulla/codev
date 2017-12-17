@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         git(url: 'https://github.com/altafmulla/codev.git', branch: 'master')
-        mvnHome= tool 'M3'
+        mvnHome = tool 'M3'
       }
     }
     stage('clean') {
